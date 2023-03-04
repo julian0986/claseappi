@@ -6,7 +6,9 @@ const controller = require('./products.controller');
 
 const router = new Router();
 
-router.get('/', controller);
+router.get('/', controller.index);
+router.get('/:id', controller.showById);
+router.post('/', controller.create);
 
 module.exports = router;
 //export default router;
